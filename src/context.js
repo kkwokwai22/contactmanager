@@ -46,33 +46,6 @@ export class Provider extends Component {
 		});
 	}
 
-	// componentDidMount() {
-	// 	async function getUrl() {
-	// 		const urlString = 'https://api.github.com/users?access_token=e6b4cbed7e99291b1e08ea7cebc2973607bb383a';
-	// 		try {
-	// 			let data;
-	// 			const gitUserData = await axios.get(urlString);
-	// 			const proms = gitUserData.data.map(async userUrl => {
-	// 				return await axios(userUrl.url + '?access_token=e6b4cbed7e99291b1e08ea7cebc2973607bb383a');
-	// 			});
-	// 			data = await Promise.all(proms);
-	// 			data;
-	// 		} catch (e) {
-	// 			console.log('this is the e', e.response);
-	// 		}
-	// 	}
-	// 	let theNeed = getUrl();
-	// 	this.setState(
-	// 		{
-	// 			data: theNeed
-	// 		},
-	// 		() => {
-	// 			console.log(this.state.contacts);
-	// 			console.log(this.state.data);
-	// 		}
-	// 	);
-	// }
-
 	render() {
 		return <Context.Provider value={this.state}>{this.props.children}</Context.Provider>;
 	}
